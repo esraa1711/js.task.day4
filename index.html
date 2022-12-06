@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+
+  position: relative;
+  /* background: yellow; */
+}
+#move {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-left: 100px;
+  /* background-color: red; */
+}
+#fly {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-left: 200px;
+  /* background-color: red; */
+}
+</style>
+<body>
+
+<p><button onclick="Move()" onmouseleave="move()">fly</button></p> 
+
+<div id ="container">
+  <div id ="move"><img src="./icon1.gif" alt=""></div>
+  <div id ="fly"><img src="./icon1.gif" alt=""></div>
+</div>
+
+<script>
+function Move() {
+  let id = 0;
+  var pic = document.getElementById("move");   
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 540) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      pic.style.top = pos + "px"; 
+      pic.style.left = pos + "px"; 
+    }
+  }
+}
+
+function move() {
+  let id = 0;
+  var pic1 = document.getElementById("fly");   
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 540) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      pic1.style.top = pos + "px"; 
+      pic1.style.left = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
