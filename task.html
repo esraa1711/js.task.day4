@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <img src="1.jpg" alt="" id="im">
+    
+
+    <div class="buttons">
+      <button id="prevButton">back</button>
+      <button id="nextButton">next</button>
+    </div>
+  </div>
+  
+</body>
+
+<script>
+    var images = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+
+    
+];
+// var slider= document.getElementById("slider");
+var id;
+var i=0;
+var slide= document.getElementById("im");
+id=setInterval(function()
+{
+    
+
+    slide.src=images[i];
+    i++;
+    if(i>images.length-1)
+    {
+        i=0;
+    }
+},2000)
+
+
+
+
+
+</script>
+</html>
